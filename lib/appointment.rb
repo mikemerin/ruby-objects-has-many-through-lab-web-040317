@@ -4,8 +4,7 @@ class Appointment
   attr_reader :date
 
   def initialize(date, patient)
-    @patient = patient
-    @date = date
+    @patient, @date = patient, date
     patient.add_appointment(self)
   end
 
